@@ -60,6 +60,7 @@ vector<pii> p;
 vector<pii> query;
 vector<int> alls;
 
+// 查找第一个等于x的元素
 int find(int x){
     int l=0,r=alls.size()-1;
     while(l<r){
@@ -67,7 +68,7 @@ int find(int x){
         if(alls[mid]>=x) r=mid;
         else l=mid+1;
     }
-    return r+1;
+    return l;
 }
 
 int a[300005],sum[300005],n,m;
